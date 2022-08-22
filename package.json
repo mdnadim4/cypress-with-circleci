@@ -1,0 +1,22 @@
+{
+  "name": "cypress-with-circleci",
+  "version": "1.0.0",
+  "description": "Cypress integrated with Circle CI tools",
+  "main": "TC_Checkbox.spec.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdnadim4/cypress-with-circleci.git"
+  },
+  "author": "Nadim Mahmud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdnadim4/cypress-with-circleci/issues"
+  },
+  "homepage": "https://github.com/mdnadim4/cypress-with-circleci#readme",
+  "dependencies": {
+    "cypress": "^10.6.0"
+  }
+}
