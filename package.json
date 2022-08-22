@@ -4,7 +4,7 @@
   "description": "Cypress integrated with Circle CI tools",
   "main": "TC_Checkbox.spec.js",
   "scripts": {
-    "npm:chrome": "npx cypress run --record --key 105be608-d195-4ae9-84c3-e1949d36bcca --browser chrome"
+    "cy:dashboard": "npx cypress run --record --key 105be608-d195-4ae9-84c3-e1949d36bcca --browser chrome"
   },
   "repository": {
     "type": "git",
