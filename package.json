@@ -5,7 +5,7 @@
   "main": "TC_Checkbox.spec.js",
   "scripts": {
     "cy:run": "npx cypress run --browser chrome",
-    "cy:dashboard": "npx cypress run --record --key 105be608-d195-4ae9-84c3-e1949d36bcca --browser chrome"
+    "cy:dashboard": "npx cypress run --record --key 105be608-d195-4ae9-84c3-e1949d36bcca"
   },
   "repository": {
     "type": "git",
