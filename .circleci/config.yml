@@ -5,9 +5,13 @@ version: 2.1
 
 orbs:
   cypress: cypress-io/cypress@1
-  
+
 workflows:
   build:
     jobs:
       - cypress/run:
+          requires:
+            - cypress/install
+          component: true
+          record: true
           command: npm run cy:dashboard
