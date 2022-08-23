@@ -1,25 +1,28 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+require('@4tw/cypress-drag-drop')
+require('cypress-downloadfile/lib/downloadFileCommand')
+import 'cypress-file-upload';
+
+
+
+
+Cypress.Commands.add('contact', (name, email, password, gender, status, date) => {
+
+    cy.get('[name="name"]:nth-child(2)').type(name).should('have.value', name)
+    cy.get('[name="email"]').type(email).should('have.value', email)
+    cy.get('[type="password"]').type(password).should('have.value', password)
+    cy.get('[type="checkbox"]').check().should('be.checked')
+    cy.get('[id="exampleFormControlSelect1"]').select(gender).should('have.value', gender)
+    cy.get('[type="radio"]').check(status).should('be.checked')
+    cy.get('[id="inlineRadio3"]').should('be.disabled')
+    cy.get('[type="date"]').type(date)
+    cy.get('[type="submit"]').click()
+    cy.wait(2000)
+    cy.get('.alert-success').should('contain', 'Success! The Form has been submitted successfully')
+
+})
+
+import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
+
+addMatchImageSnapshotCommand();
+
+

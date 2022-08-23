@@ -5,4 +5,4 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          command: 'npm:chrome'
+          command: npm run cy:dashboard
